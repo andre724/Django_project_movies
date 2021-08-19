@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        {% load static%}
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" type="text/css" href="{% static 'filmes/style.css' %}">
+        <title>{{ filmes.movie_title }}</title>
+    </head>
+<body>
+    <div class="card">
+        <div class="poster">
+            <img class= "img_poster" src= "{{filmes.poster.url}}" alt="">
+        </div>
+        <div class="metadados">
+            <h1>{{ filmes.movie_title }}</h1>
+            <h3>Descrição</h3><p>{{filmes.synopsis}}</p>
+            <h3>Data de lançamento</h3><p>{{filmes.r_date}}</p>
+            <h3>Nota</h3><p>{{filmes.raitings}}</p>
+            <h3>Generos</h3><p>{{filmes.genre}}</p>
+        </div>
+    </div>
+    
+</body>
+</html>
